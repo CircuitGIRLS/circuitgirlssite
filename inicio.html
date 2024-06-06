@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!--fontimport-->
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="header">
+    <a href="#"class="logo">Circuit Girls</a>
+ 
+  <nav class="navbar">
+<a href="#home" class="active">inicio</a>
+<a href="index.html" >Área do Aluno</a>
+<a href="#sobre">Sobre</a>
+<a href="#sim">Recomendações</a>
+<a href="#home">Contate-nos</a>
+</nav>
+</header>
+
+<section class="sobre" id="sobre">
+    <h2 class="heading">O que buscamos?</h2>
+    <br>
+    <br>
+    <br>
+    <div class="sobre-container">
+        <div class="sobre-box">
+           <div class="sobre-info">
+             <h4>Análise <i class="fa-solid fa-magnifying-glass"></i></h4>
+             <p>Analisar e compreender as dificuldades e problemáticas enfrentadas;</p>
+        </div>
+    </div> 
+    <div class="sobre-box">
+        <div class="sobre-info">
+          <h4>incentivo <i class="fa-solid fa-people-pulling"></i></h4>
+          <p>Incentivar a curiosidade sobre noções de robótica educacional;</p>
+     </div>
+ </div> 
+ <div class="sobre-box">
+    <div class="sobre-info">
+      <h4>Confrontrar <i class="fa-solid fa-handshake-angle"></i></h4>
+      <p>Enfrentar as dificuldades e as desigualdades causadas no gênero feminino da área da tecnologia;</p>
+ </div>
+</div> 
+<div class="sobre-box">
+<div class="sobre-info">
+  <h4>Demonstrar <i class="fa-solid fa-chalkboard-user"></i></h4>
+  <p>Mostrar por meio de oficinas online um pouco sobre a área e seus trabalhos e objetivos;</p>
+</div>
+</div> 
+<div class="sobre-box">
+<div class="sobre-info">
+  <h4>Implantar <i class="fa-solid fa-seedling"></i></h4>
+  <p>Implantar a área da tecnologia nas vidas das mulheres e meninas no mercado de trabalho até ao entretenimento;</p>
+</div>
+</div> 
+<div class="sobre-box">
+<div class="sobre-info">
+  <h4>Desenvolver <i class="fa-solid fa-puzzle-piece"></i></h4>
+  <p>Desenvolver a inclusão do gênero feminino na área da TI.</p>
+</div>
+</div> 
+</div>
+</section>
+<section id="sim">
+    <h3 class="heading">Recomendações</h3>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="main-video">
+        <div class="video">
+            <video src="img/Aula 1 - O que é Robótica Educacional_ _ Curso de Robótica com Arduino para Educadores.mp4" controls muted></video>
+            <h3 class="title">Robótica Educacional </h3>
+        </div>
+    </div>
+    <div class="video-list">
+        <div class="vid active">
+            <video src="img/Aula 1 - O que é Robótica Educacional_ _ Curso de Robótica com Arduino para Educadores.mp4" controls muted></video>
+            <h3 class="title">Robótica Educacional</h3>
+        </div>
+        <div class="vid">
+            <video src="img/CONHEÇA 6 ÁREAS EM QUE A ROBÓTICA PODE SER UTILIZADA _ Links importantes na descrição.mp4" controls muted></video>
+            <h3 class="title">Áreas da Robótica</h3>
+        </div>
+        <div class="vid">
+            <video src="img/O que é Arduino e o que pode ser feito com ele_.mp4" controls muted></video>
+            <h3 class="title">Arduino</h3>
+        </div>
+        <div class="vid">
+            <video src="img/Scratch para iniciantes! Aprenda a programação básica agora!.mp4" controls muted></video>
+            <h3 class="title">Scratch</h3>
+        </div>
+        <div class="vid">
+            <video src="img/TUTORIAL TINKERCAD ARDUINO COMO CRIAR E SIMULAR UM SEMÁFORO SIMPLES.mp4" controls muted></video>
+            <h3 class="title">Tinkercad</h3>
+        </div>
+    </div>
+    </div>
+    <script>
+        let listVideo = document.querySelectorAll('.video-list .vid')
+        let mainVideo = document.querySelector('.main-video video')
+        let title = document.querySelector('.main-video .title')
+
+        listVideo.forEach(video =>{
+            video.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+                if(video.classList.contains('active')){
+                    let src = video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML = text;
+                }
+            };
+        });
+    </script>
+</section>
+    
+<script src="Inicio.js"></script>
+</body>
+</html>

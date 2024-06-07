@@ -58,3 +58,25 @@ function cadastrar() {
         document.getElementById("cadastroMessage").innerText = "Por favor, preencha todos os campos!";
     }
 }
+var modal = document.getElementById('contactModal');
+var btn = document.getElementById('contactBtn');
+var span = document.getElementById('closeBtn');
+var closeModalBtn = document.getElementById('closeModalBtn');
+
+btn.onclick = function() {
+    modal.style.display = 'flex';
+}
+
+span.onclick = function() {
+    modal.style.display = 'none';
+}
+
+closeModalBtn.onclick = function() {
+    modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}

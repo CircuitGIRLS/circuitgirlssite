@@ -16,7 +16,7 @@ function login() {
     if (localStorage.getItem(username) === password) {
         document.getElementById("loginMessage").innerText = "Login bem-sucedido!";
         setTimeout(function() {1
-            window.location.href = "Inicio/inicio.html";
+            window.location.href = "inicio.html";
         }, 2000); // Tempo em milissegundos (2 segundos)
     } else {
         document.getElementById("loginMessage").innerText = "Usuário ou senha incorretos!";
@@ -48,7 +48,7 @@ function cadastrar() {
 
                 // Redirecionar para outra página após 2 segundos
                 setTimeout(function() {1
-                    window.location.href = "Inicio/inicio.html";
+                    window.location.href = "inicio.html";
                 }, 2000); // Tempo em milissegundos (2 segundos)
             }
         } else {

@@ -329,3 +329,95 @@ span {
     margin-top: 10px;
     color: red;
 }
+button {
+    background-color: #a05590;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--main-color);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--bg-color);
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close {
+    color: var(--bg-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-email a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+.team-members {
+    margin-top: 20px;
+}
+
+.team-members h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--bg-color);
+}
+
+.team-members .row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-members .column {
+    width: 45%;
+}
+
+.team-members ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.team-members li {
+    background: var(--second-bg-color);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px white;
+}
+
